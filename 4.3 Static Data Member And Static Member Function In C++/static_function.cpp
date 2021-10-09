@@ -1,0 +1,40 @@
+// Static data members of classes in C++.
+// Ans: They are attributes of classes OR class members OR class fields.
+
+#include <iostream>
+using namespace std;
+
+class Base
+{
+public:
+    int x;
+    static int y;  // Static data member.
+
+    void printX() {cout << x << endl;} // This can access both static and non static data member.
+    static void printY() {cout << y << endl;} // This function is static function so this can access only static data member.
+
+};
+// Static data member is belong to class. That's why we need to create a memory for static function.
+
+int Base:: y; // Memory for y Bacause of static function.
+
+int main(void)
+{
+    Base b1;
+    b1.x = 10;
+    b1.y = 30;
+
+    Base b2;
+    b2.x = 20;
+    b2.y = 40;
+
+    b1.printX();
+    b1.printY();
+
+    b2.printX();
+    b2.printY();
+
+    cout << "It just over writting the value of Y in memory beacuse for Y it has only one memory.\nSo, it just save the last value of y in memory";
+
+
+}

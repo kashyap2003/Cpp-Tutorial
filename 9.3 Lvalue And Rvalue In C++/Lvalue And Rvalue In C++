@@ -1,0 +1,23 @@
+LValue and RValue in C++
+
+Every expression in C++ is either Lvalue or RValue expression.
+
+Lvalue: If you can take the address of expression then it is Lvalue, and they last extended period of time.
+RValue: RValue are such expression which you can't take address and they are temporary, they don't exist after one line.
+
+Examples:
+
+int x = 10;      // x is Lvalue and 10 is RValue
+
+
+int a =10, b=10;
+int x = (a+b);      // x is Lvalue and a+b is RValue
+int *p = &(a+b;)    // Error: (a+b) is not Lvalue
+
+
+class Cat{};
+Cat c = Cat();      // Cat() is an RValue
+
+
+int square(int x) {return x*x;}
+int sq = square(10);    // square(10) is an RValue

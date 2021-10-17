@@ -1,0 +1,7 @@
+If let supposed you have a programm a that is like a while loop and some where in between while loop you have
+a memory leak that while loop may be in a thread and it is running always in may be 1sec or 2sec or may be 
+1min and let suppose you are running this application for 2 years then you will have some mentanance break
+to shut it down and restart by the time you will restart you know what this whole momory leak will always be
+there with you meaning OS will always think that you are still using this memory.
+
+If your application goes down OS will get all the memory back what it allocate for some perticular programm.
